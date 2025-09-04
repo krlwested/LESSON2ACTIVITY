@@ -50,14 +50,14 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
-            this.txtLec = new System.Windows.Forms.TextBox();
-            this.txtLab = new System.Windows.Forms.TextBox();
+            this.txtbox_unitlec = new System.Windows.Forms.TextBox();
+            this.txtbox_unitlab = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.txtDay = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtUnits = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtbox_creditunits = new System.Windows.Forms.TextBox();
+            this.txtbox_totalnumberofunits = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -65,11 +65,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.txtbox_totaltuitionfee = new System.Windows.Forms.TextBox();
+            this.txtbox_totalmiscellaneousfee = new System.Windows.Forms.TextBox();
+            this.txtbox_ciscolab = new System.Windows.Forms.TextBox();
+            this.txtbox_booklet = new System.Windows.Forms.TextBox();
+            this.txtbox_totaltuitionandotherfees = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -83,7 +83,7 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txtbox_computerlabfee = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
@@ -91,16 +91,22 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreditUnits = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitLab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnitLec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.listBox7 = new System.Windows.Forms.ListBox();
+            this.Calculateradiobtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -301,19 +307,19 @@
             this.txtDesc.Size = new System.Drawing.Size(258, 20);
             this.txtDesc.TabIndex = 26;
             // 
-            // txtLec
+            // txtbox_unitlec
             // 
-            this.txtLec.Location = new System.Drawing.Point(159, 371);
-            this.txtLec.Name = "txtLec";
-            this.txtLec.Size = new System.Drawing.Size(258, 20);
-            this.txtLec.TabIndex = 27;
+            this.txtbox_unitlec.Location = new System.Drawing.Point(159, 371);
+            this.txtbox_unitlec.Name = "txtbox_unitlec";
+            this.txtbox_unitlec.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_unitlec.TabIndex = 27;
             // 
-            // txtLab
+            // txtbox_unitlab
             // 
-            this.txtLab.Location = new System.Drawing.Point(159, 406);
-            this.txtLab.Name = "txtLab";
-            this.txtLab.Size = new System.Drawing.Size(258, 20);
-            this.txtLab.TabIndex = 28;
+            this.txtbox_unitlab.Location = new System.Drawing.Point(159, 406);
+            this.txtbox_unitlab.Name = "txtbox_unitlab";
+            this.txtbox_unitlab.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_unitlab.TabIndex = 28;
             // 
             // txtTime
             // 
@@ -349,19 +355,20 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "Total Number of Units:";
             // 
-            // txtUnits
+            // txtbox_creditunits
             // 
-            this.txtUnits.Location = new System.Drawing.Point(608, 264);
-            this.txtUnits.Name = "txtUnits";
-            this.txtUnits.Size = new System.Drawing.Size(258, 20);
-            this.txtUnits.TabIndex = 33;
+            this.txtbox_creditunits.Location = new System.Drawing.Point(608, 264);
+            this.txtbox_creditunits.Name = "txtbox_creditunits";
+            this.txtbox_creditunits.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_creditunits.TabIndex = 33;
+            this.txtbox_creditunits.TextChanged += new System.EventHandler(this.txtbox_creditunits_TextChanged);
             // 
-            // textBox15
+            // txtbox_totalnumberofunits
             // 
-            this.textBox15.Location = new System.Drawing.Point(608, 304);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(258, 20);
-            this.textBox15.TabIndex = 34;
+            this.txtbox_totalnumberofunits.Location = new System.Drawing.Point(608, 304);
+            this.txtbox_totalnumberofunits.Name = "txtbox_totalnumberofunits";
+            this.txtbox_totalnumberofunits.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_totalnumberofunits.TabIndex = 34;
             // 
             // label16
             // 
@@ -430,40 +437,40 @@
             this.textBox16.Size = new System.Drawing.Size(258, 20);
             this.textBox16.TabIndex = 41;
             // 
-            // textBox17
+            // txtbox_totaltuitionfee
             // 
-            this.textBox17.Location = new System.Drawing.Point(608, 374);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(258, 20);
-            this.textBox17.TabIndex = 42;
+            this.txtbox_totaltuitionfee.Location = new System.Drawing.Point(608, 374);
+            this.txtbox_totaltuitionfee.Name = "txtbox_totaltuitionfee";
+            this.txtbox_totaltuitionfee.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_totaltuitionfee.TabIndex = 42;
             // 
-            // textBox18
+            // txtbox_totalmiscellaneousfee
             // 
-            this.textBox18.Location = new System.Drawing.Point(608, 409);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(258, 20);
-            this.textBox18.TabIndex = 43;
+            this.txtbox_totalmiscellaneousfee.Location = new System.Drawing.Point(608, 409);
+            this.txtbox_totalmiscellaneousfee.Name = "txtbox_totalmiscellaneousfee";
+            this.txtbox_totalmiscellaneousfee.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_totalmiscellaneousfee.TabIndex = 43;
             // 
-            // textBox19
+            // txtbox_ciscolab
             // 
-            this.textBox19.Location = new System.Drawing.Point(608, 441);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(258, 20);
-            this.textBox19.TabIndex = 44;
+            this.txtbox_ciscolab.Location = new System.Drawing.Point(608, 441);
+            this.txtbox_ciscolab.Name = "txtbox_ciscolab";
+            this.txtbox_ciscolab.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_ciscolab.TabIndex = 44;
             // 
-            // textBox20
+            // txtbox_booklet
             // 
-            this.textBox20.Location = new System.Drawing.Point(608, 476);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(258, 20);
-            this.textBox20.TabIndex = 45;
+            this.txtbox_booklet.Location = new System.Drawing.Point(608, 476);
+            this.txtbox_booklet.Name = "txtbox_booklet";
+            this.txtbox_booklet.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_booklet.TabIndex = 45;
             // 
-            // textBox21
+            // txtbox_totaltuitionandotherfees
             // 
-            this.textBox21.Location = new System.Drawing.Point(608, 508);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(258, 20);
-            this.textBox21.TabIndex = 46;
+            this.txtbox_totaltuitionandotherfees.Location = new System.Drawing.Point(608, 508);
+            this.txtbox_totaltuitionandotherfees.Name = "txtbox_totaltuitionandotherfees";
+            this.txtbox_totaltuitionandotherfees.Size = new System.Drawing.Size(258, 20);
+            this.txtbox_totaltuitionandotherfees.TabIndex = 46;
             // 
             // label22
             // 
@@ -584,12 +591,12 @@
             this.textBox25.Size = new System.Drawing.Size(258, 20);
             this.textBox25.TabIndex = 59;
             // 
-            // textBox26
+            // txtbox_computerlabfee
             // 
-            this.textBox26.Location = new System.Drawing.Point(259, 925);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(232, 20);
-            this.textBox26.TabIndex = 60;
+            this.txtbox_computerlabfee.Location = new System.Drawing.Point(259, 925);
+            this.txtbox_computerlabfee.Name = "txtbox_computerlabfee";
+            this.txtbox_computerlabfee.Size = new System.Drawing.Size(232, 20);
+            this.txtbox_computerlabfee.TabIndex = 60;
             // 
             // textBox27
             // 
@@ -651,70 +658,170 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // Day
+            // listBox1
             // 
-            this.Day.HeaderText = "Day:";
-            this.Day.Name = "Day";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(16, 561);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(108, 225);
+            this.listBox1.TabIndex = 70;
             // 
-            // Time
+            // label31
             // 
-            this.Time.HeaderText = "Time:";
-            this.Time.Name = "Time";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(13, 536);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(85, 16);
+            this.label31.TabIndex = 71;
+            this.label31.Text = "Course Code:";
             // 
-            // CreditUnits
+            // label32
             // 
-            this.CreditUnits.HeaderText = "Credit Units:";
-            this.CreditUnits.Name = "CreditUnits";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(127, 536);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(83, 16);
+            this.label32.TabIndex = 72;
+            this.label32.Text = "Course Desc:";
             // 
-            // UnitLab
+            // label33
             // 
-            this.UnitLab.HeaderText = "Unit Lab:";
-            this.UnitLab.Name = "UnitLab";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(256, 536);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(57, 16);
+            this.label33.TabIndex = 73;
+            this.label33.Text = "Unit Lec:";
             // 
-            // UnitLec
+            // label34
             // 
-            this.UnitLec.HeaderText = "Unit Lec:";
-            this.UnitLec.Name = "UnitLec";
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(355, 536);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 16);
+            this.label34.TabIndex = 74;
+            this.label34.Text = "Unit Lab:";
             // 
-            // CourseDesc
+            // label35
             // 
-            this.CourseDesc.HeaderText = "Course Desc:";
-            this.CourseDesc.Name = "CourseDesc";
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(457, 536);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(78, 16);
+            this.label35.TabIndex = 75;
+            this.label35.Text = "Credit Units:";
             // 
-            // CourseCode
+            // label36
             // 
-            this.CourseCode.HeaderText = "Course Code:";
-            this.CourseCode.Name = "CourseCode";
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(587, 536);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(41, 16);
+            this.label36.TabIndex = 76;
+            this.label36.Text = "Time:";
             // 
-            // dataGridView1
+            // label37
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CourseCode,
-            this.CourseDesc,
-            this.UnitLec,
-            this.UnitLab,
-            this.CreditUnits,
-            this.Time,
-            this.Day});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 567);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(854, 240);
-            this.dataGridView1.TabIndex = 69;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(717, 536);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 16);
+            this.label37.TabIndex = 77;
+            this.label37.Text = "Day:";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(124, 561);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(130, 225);
+            this.listBox2.TabIndex = 78;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(255, 561);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(102, 225);
+            this.listBox3.TabIndex = 79;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(358, 561);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(102, 225);
+            this.listBox4.TabIndex = 80;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Location = new System.Drawing.Point(460, 561);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(130, 225);
+            this.listBox5.TabIndex = 81;
+            // 
+            // listBox6
+            // 
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Location = new System.Drawing.Point(590, 561);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(130, 225);
+            this.listBox6.TabIndex = 82;
+            // 
+            // listBox7
+            // 
+            this.listBox7.FormattingEnabled = true;
+            this.listBox7.Location = new System.Drawing.Point(720, 561);
+            this.listBox7.Name = "listBox7";
+            this.listBox7.Size = new System.Drawing.Size(130, 225);
+            this.listBox7.TabIndex = 83;
+            // 
+            // Calculateradiobtn
+            // 
+            this.Calculateradiobtn.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calculateradiobtn.Location = new System.Drawing.Point(715, 110);
+            this.Calculateradiobtn.Name = "Calculateradiobtn";
+            this.Calculateradiobtn.Size = new System.Drawing.Size(147, 67);
+            this.Calculateradiobtn.TabIndex = 84;
+            this.Calculateradiobtn.Text = "Calculate Tuition Fee";
+            this.Calculateradiobtn.UseVisualStyleBackColor = true;
+            this.Calculateradiobtn.Click += new System.EventHandler(this.Calculateradiobtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(882, 1061);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Calculateradiobtn);
+            this.Controls.Add(this.listBox7);
+            this.Controls.Add(this.listBox6);
+            this.Controls.Add(this.listBox5);
+            this.Controls.Add(this.listBox4);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.label32);
+            this.Controls.Add(this.label31);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cmbPrograms);
             this.Controls.Add(this.textBox29);
             this.Controls.Add(this.textBox28);
             this.Controls.Add(this.textBox27);
-            this.Controls.Add(this.textBox26);
+            this.Controls.Add(this.txtbox_computerlabfee);
             this.Controls.Add(this.textBox25);
             this.Controls.Add(this.textBox24);
             this.Controls.Add(this.textBox23);
@@ -728,11 +835,11 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.txtbox_totaltuitionandotherfees);
+            this.Controls.Add(this.txtbox_booklet);
+            this.Controls.Add(this.txtbox_ciscolab);
+            this.Controls.Add(this.txtbox_totalmiscellaneousfee);
+            this.Controls.Add(this.txtbox_totaltuitionfee);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -740,14 +847,14 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.txtUnits);
+            this.Controls.Add(this.txtbox_totalnumberofunits);
+            this.Controls.Add(this.txtbox_creditunits);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtDay);
             this.Controls.Add(this.txtTime);
-            this.Controls.Add(this.txtLab);
-            this.Controls.Add(this.txtLec);
+            this.Controls.Add(this.txtbox_unitlab);
+            this.Controls.Add(this.txtbox_unitlec);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.textBox7);
@@ -773,8 +880,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,14 +911,14 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.TextBox txtLec;
-        private System.Windows.Forms.TextBox txtLab;
+        private System.Windows.Forms.TextBox txtbox_unitlec;
+        private System.Windows.Forms.TextBox txtbox_unitlab;
         private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.TextBox txtDay;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtUnits;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtbox_creditunits;
+        private System.Windows.Forms.TextBox txtbox_totalnumberofunits;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -819,11 +926,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtbox_totaltuitionfee;
+        private System.Windows.Forms.TextBox txtbox_totalmiscellaneousfee;
+        private System.Windows.Forms.TextBox txtbox_ciscolab;
+        private System.Windows.Forms.TextBox txtbox_booklet;
+        private System.Windows.Forms.TextBox txtbox_totaltuitionandotherfees;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -837,7 +944,7 @@
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txtbox_computerlabfee;
         private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox29;
@@ -845,14 +952,21 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CreditUnits;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitLab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitLec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseDesc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseCode;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBox7;
+        private System.Windows.Forms.Button Calculateradiobtn;
     }
 }
 

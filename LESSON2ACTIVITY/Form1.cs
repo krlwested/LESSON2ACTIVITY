@@ -58,26 +58,67 @@ namespace LESSON2ACTIVITY
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Rows.Add(
-               txtCode.Text,
-               txtDesc.Text,
-               txtLec.Text,
-               txtLab.Text,
-               txtUnits.Text,
-               txtTime.Text,
-               txtDay.Text
-               
-            );
-
+        { 
+            
             txtCode.Clear();
             txtDesc.Clear();
-            txtLec.Clear();
-            txtLab.Clear();
-            txtUnits.Clear();
+            txtbox_unitlec.Clear();
+            txtbox_unitlab.Clear();
+            txtbox_creditunits.Clear();
             txtTime.Clear();
             txtDay.Clear();
 
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtbox_totalnumberofunits.Enabled = false;
+            txtbox_totaltuitionfee.Enabled = false;
+            txtbox_creditunits.Enabled = false;
+            txtbox_totalmiscellaneousfee.Enabled = false;
+            txtbox_totaltuitionandotherfees.Enabled = false;
+        }
+
+        private void txtbox_creditunits_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Calculateradiobtn_Click(object sender, EventArgs e)
+        {
+            int credit_units, unit_lec, unit_lab;
+            double tuitionperunit = 1700.00, total_tuitionfee, total_miscellaneousfee, total_tuitionandotherfees, ciscolab, exambooklet, computerlabfee;
+            credit_units = Convert.ToInt32(txtbox_creditunits.Text);
+            unit_lec = Convert.ToInt32(txtbox_unitlec.Text);
+            unit_lab = Convert.ToInt32(txtbox_unitlab.Text);
+
+            ciscolab = Convert.ToDouble(txtbox_ciscolab.Text);
+            exambooklet = Convert.ToDouble(txtbox_booklet.Text);
+            computerlabfee = Convert.ToDouble(txtbox_computerlabfee.Text);
+            
+
+            credit_units = unit_lab + unit_lec;
+            
+
+            total_numberofunits = credit_units + unit_lab;
+            total_miscellaneousfee = ciscolab + exambooklet + computerlabfee;
+            total_tuitionandotherfees = total_numberofunits + total_miscellaneousfee;
+
+            txtbox_creditunits.Text = credit_units.ToString();
+            txtbox_totalnumberofunits.Text = total_numberofunits.ToString();
+            txtbox_unitlab.Text = unit_lab.ToString();
+            txtbox_totalmiscellaneousfee.Text = total_miscellaneousfee.ToString();
+            txtbox_computerlabfee.Text = computerlabfee.ToString();
+            txtbox_booklet.Text = exambooklet.ToString();
+            txtbox_ciscolab.Text = ciscolab.ToString();
+            txtTime.Text = Time.ToString();
+
+            total_miscellaneousfee = Convert.ToDouble(txtbox_totalmiscellaneousfee.Text);
+            total_tuitionandotherfees = Convert.ToDouble(txtbox_totaltuitionandotherfees.Text);
+            total_tuitionfee = (unit_lab + unit_lec * tuitionperunit);
+            total_miscellaneousfee = (ciscolab + exambooklet + computerlabfee);
+            total_tuitionandotherfees = total_tuitionfee + total_miscellaneousfee;
 
         }
     }
